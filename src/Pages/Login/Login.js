@@ -2,7 +2,7 @@ import React from 'react';
 import './Login.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hook/useFirebase';
+import useFirebase from '../../Hook/useFirebase';
 
 const Login = () => {
    const {loginWithGoogle, user} = useFirebase()
@@ -14,10 +14,10 @@ const Login = () => {
                   <h4 className="pt-5 pb-2">Welcome back! Please sign in {user.displayName}</h4>
                   <Form >
                      <Form.Group className="mb-3" controlId="formGroupEmail">
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="email" placeholder="Enter email" required />
                      </Form.Group>
                      <Form.Group className="mb-3" controlId="formGroupPassword">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password"  required/>
                      </Form.Group>
                      <Button className="btn btn-lg btn-primary btn-block form-control">Login</Button>
                      <h6 className="mt-3 text-center">OR</h6>
