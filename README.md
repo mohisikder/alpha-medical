@@ -2,7 +2,7 @@
 
 # Alpha Medical
 
-# Feature of Alpha Medical
+# features  of Alpha Medical
    
    * User Register
    * User Login

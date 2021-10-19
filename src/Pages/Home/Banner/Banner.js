@@ -16,7 +16,7 @@ const Banner = () => {
                />
                <Carousel.Caption className="text-dark ms-auto">
                   <h3>Health is the first step to prosperity</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <p>Health is a state of complete physical, mental and social well being.</p>
                </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -28,7 +28,7 @@ const Banner = () => {
 
                <Carousel.Caption className="text-dark ms-auto">
                   <h3>Better health and a better way of life.</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Health, according to the World Health Organization, is "a state of complete physical.</p>
                </Carousel.Caption>
             </Carousel.Item>
          </Carousel>
