@@ -1,0 +1,12 @@
+.service-bg{
+   background: url(../../../images/bradcam2.png);
+   background-repeat: no-repeat;
+   height: 400px;
+   width: 100%;
+   background-position: center center;
+   background-size: cover;
+   background-blend-mode: overlay;
+}
+.service-title{
+   padding-top: 13%;
+}

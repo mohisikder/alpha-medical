@@ -33,7 +33,7 @@ const Register = () => {
 
     const handlePassword=(e)=>{
        if(e.target.value.length<6){
-         setError(error.message);
+          setError(error)
        }else{
           setPassword(e.target.value)
        }

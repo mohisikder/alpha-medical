@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
    const [services, setServices] = useState([])
@@ -16,7 +17,7 @@ const Services = () => {
          <hr className="w-25 m-auto"/>
             <Row xs={1} md={3} className="g-4 mt-4">
                {
-                  services.slice(0, 6).map(service =>(
+                  services.map(service =>(
                      <Col>
                         <Card className="h-100 shadow">
                         <Card.Img variant="top" src={service.img} />
@@ -25,7 +26,9 @@ const Services = () => {
                            <Card.Text>
                               {service.description}
                            </Card.Text>
-                           <Button variant="primary">Know More</Button>
+                           <Link to={`/service/${service.id}`}>
+                              <Button variant="primary">Know More</Button>
+                           </Link>
                         </Card.Body>
                         </Card>
                      </Col>
