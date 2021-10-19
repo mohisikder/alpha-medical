@@ -1,4 +1,6 @@
 import { createUserWithEmailAndPassword, getAuth } from '@firebase/auth';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Col, Container, Form, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -52,7 +54,7 @@ const Register = () => {
                      <Form.Group className="mb-3">
                         <Form.Control onChange={handlePassword} type="password" id="userPass" placeholder="Password" required/>
                      </Form.Group>
-                     <Button type="submit" className="btn btn-lg btn-primary btn-block form-control">Create an Account</Button>
+                     <Button type="submit" className="btn btn-lg btn-primary btn-block form-control"><span className="me-2"><FontAwesomeIcon icon={faSignOutAlt} /></span> Create an Account</Button>
                   </Form>
                   <p className="mt-3">Already have an account? <Link className="text-white" to="/login">Login</Link></p>
                </Col>

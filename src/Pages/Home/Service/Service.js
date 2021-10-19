@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 
 const Service = () => {
    const {Id} = useParams()
+   console.log(useParams);
 
    return (
       <>
-         <h1>This from Service {Id}</h1>
          <div className="service-bg">
             <Container>
                <Row className="service-title">
@@ -21,6 +21,13 @@ const Service = () => {
                </Row>
             </Container>
          </div>
+         <Container className="my-5">
+            <Row>
+               <Col>
+                  <h1 className="text-center">This from Service {Id}</h1>
+               </Col>
+            </Row>
+         </Container>
       </>
    );
 };
