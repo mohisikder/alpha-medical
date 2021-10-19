@@ -1,11 +1,10 @@
 import React from 'react';
 import './Service.css';
 import { useParams } from 'react-router';
-import { Card, Col, Container, Row, Button } from 'react-bootstrap';
-import Services from '../Services/Services';
-import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
 
-const Service = () => {
+const Service = (props) => {
+   console.log(props);
    const {Id} = useParams()
    console.log(useParams);
 
