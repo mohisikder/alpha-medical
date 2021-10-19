@@ -3,8 +3,7 @@ import './Service.css';
 import { useParams } from 'react-router';
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Service = (props) => {
-   console.log(props);
+const Service = () => {
    const {Id} = useParams()
    console.log(useParams);
 
