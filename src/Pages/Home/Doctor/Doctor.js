@@ -1,6 +1,5 @@
-import { height } from 'dom-helpers';
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row, Button } from 'react-bootstrap';
+import { Card, Col, Container, Row, } from 'react-bootstrap';
 
 const Doctor = () => {
    const [doctors, setDoctors] = useState([])
