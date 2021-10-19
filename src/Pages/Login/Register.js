@@ -8,7 +8,7 @@ initializeFirebaseApp()
 
 const Register = () => {
    const auth = getAuth();
-
+   const [user, setUser] = useState({})
    const [error, setError] = useState("")
    const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +19,7 @@ const Register = () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
           const user = result.user;
-          console.log(user);
+          setUser(user)
           setError('');
         })
         .catch(error => {
