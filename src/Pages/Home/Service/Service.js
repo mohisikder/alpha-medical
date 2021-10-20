@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Service.css';
 import { useParams } from 'react-router';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Service = () => {
-   const {Id} = useParams()
-   console.log(useParams);
+   const {serviceId} = useParams()
+   const [serviceDetails, setServiceDetails] = useState([])
+   const [singleService, setSingleService] = useState([])
+
+   useEffect(()=>{
+      fetch(`/servicedetails.json`)
+      .then(res=> res.json())
+      .then(data=>setServiceDetails(data.service))
+   },[])
+
+   useEffect(()=>{
+      const foundService = serviceDetails.find(
+         (service)=>(service.id == serviceId))
+         setSingleService(foundService);
+
+   },[serviceDetails])
 
    return (
       <>
@@ -20,9 +35,17 @@ const Service = () => {
             </Container>
          </div>
          <Container className="my-5">
-            <Row>
+            <Row xs={1} md={2} className="g-4 d-flex justify-content-center">
                <Col>
-                  <h1 className="text-center">This from Service {Id}</h1>
+                  <Card className="h-100 shadow">
+                  <Card.Img variant="top" className="h-50" src={singleService?.img} />
+                  <Card.Body>
+                     <Card.Title>{singleService?.title}</Card.Title>
+                     <Card.Text>
+                        {singleService?.description}
+                     </Card.Text>
+                  </Card.Body>
+                  </Card>
                </Col>
             </Row>
          </Container>
