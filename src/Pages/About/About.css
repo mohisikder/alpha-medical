@@ -1,3 +1,6 @@
+.main-body-bg {
+   background: #F4F0F0;
+ }
 .about-bg{
    background: url('../../images/about-01.jpg');
    width: 100%;
@@ -9,4 +12,7 @@
 .about-text{
    color: black;
    padding-top: 25%;
+}
+.about-bg-white{
+   background: white;
 }

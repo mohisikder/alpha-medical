@@ -19,6 +19,7 @@ import PrivateRoute from './Private/PrivateRoute';
 function App() {
   return (
     <>
+    <div className="app-bg">
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -57,6 +58,7 @@ function App() {
           <Footer></Footer>
         </Router>
       </AuthProvider>
+      </div>
     </>
   );
 }
