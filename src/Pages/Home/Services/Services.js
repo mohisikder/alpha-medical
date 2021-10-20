@@ -11,7 +11,7 @@ const Services = () => {
       .then(data=> setServices(data))
    },[])
    return (
-      <>
+      <> 
          <Container className="my-5">
          <h2 className="mt-4 text-center">Our Services</h2>
          <hr className="w-25 m-auto"/>
@@ -24,10 +24,10 @@ const Services = () => {
                         <Card.Body>
                            <Card.Title>{service.title}</Card.Title>
                            <Card.Text>
-                              {service.description}
+                              {service.description.slice(0, 200)}
                            </Card.Text>
                            <Link to={`/service/${service.id}`}>
-                              <Button variant="primary">Know More</Button>
+                              <Button variant="primary">Learn More</Button>
                            </Link>
                         </Card.Body>
                         </Card>

@@ -7,7 +7,7 @@ const Header = () => {
    const {user, handleSignOut} = useAuth()
    return (
       <>
-         <Navbar bg="dark" expand="lg">
+         <Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
             <Container>
                <Navbar.Brand href="/home" className="text-white">Alpha Medical</Navbar.Brand>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />

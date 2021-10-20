@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Nav, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faLinkedin, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { Link, NavLink } from 'react-router-dom';
 
 const Footer = () => {
    return (
@@ -20,11 +21,11 @@ const Footer = () => {
                <Col md={3}>
                   <h4>Useful Links</h4>
                   <Nav defaultActiveKey="/" className="flex-column">
-                     <Nav.Link className="text-white" to="/">Home</Nav.Link>
-                     <Nav.Link className="text-white" to="/about">About Us</Nav.Link>
-                     <Nav.Link className="text-white" to="/services">Services</Nav.Link>
-                     <Nav.Link className="text-white" to="/doctors">Doctors</Nav.Link>
-                     <Nav.Link className="text-white" to="/contact">Contact Us</Nav.Link>
+                     <Link className="text-white" to="/home">Home</Link>
+                     <Link className="text-white" to="/about">About Us</Link>
+                     <Link className="text-white" to="/services">Services</Link>
+                     <Link className="text-white" to="/doctors">Doctors</Link>
+                     <Link className="text-white" to="/contact">Contact Us</Link>
                   </Nav>
                </Col>
                <Col md={3}>
