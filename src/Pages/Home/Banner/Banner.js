@@ -1,37 +1,26 @@
 import React from 'react';
 import './Banner.css';
-import { Carousel } from 'react-bootstrap';
-import SliderOne from '../../../images/slider/slider-01.jpg';
-import SliderTwo from '../../../images/slider/slider-02.jpg';
+import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
    return (
       <>
-         <Carousel className="d-flex justify-content-center">
-            <Carousel.Item>
-               <img
-                  className="d-block w-100"
-                  src={SliderOne}
-                  alt="First slide"
-               />
-               <Carousel.Caption className="text-dark ms-auto">
-                  <h3>Health is the first step to prosperity</h3>
-                  <p>Health is a state of complete physical, mental and social well being.</p>
-               </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-               <img
-                  className="d-block w-100"
-                  src={SliderTwo}
-                  alt="Second slide"
-               />
-
-               <Carousel.Caption className="text-dark ms-auto">
-                  <h3>Better health and a better way of life.</h3>
-                  <p>Health, according to the World Health Organization, is "a state of complete physical.</p>
-               </Carousel.Caption>
-            </Carousel.Item>
-         </Carousel>
+         <div className="hero-bg">
+            <Container>
+               <Row className="d-flex align-items-center">
+                  <Col xm={12} md={6}>
+                     <div className="hero-title"> 
+                        <h1>Health is Wealth – Keep this treasure Safe</h1>
+                        <h5>Health is a state of complete physical, mental and social well being. For a healthy life cycle, a person needs to have a balanced diet and has to regularly exercise</h5>
+                        <Link to="/services">
+                           <Button className="px-5 my-3">Check our Service</Button>
+                        </Link>
+                     </div>
+                  </Col>
+               </Row>
+            </Container>
+         </div>
       </>
    );
 };
